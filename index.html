@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <title>Portfolio - Home</title>
+</head>
+<body>
+    <!--===== HEADER =====-->
+    <header class="l-header">
+        <nav class="nav bd-grid">
+            <div>
+                <a href="index.html" class="nav__logo">Văn Toàn</a>
+            </div>
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="index.html" class="nav__link active">Home</a></li>
+                    <li class="nav__item"><a href="about.html" class="nav__link">About</a></li>
+                    <li class="nav__item"><a href="skills.html" class="nav__link">Skills & Projects</a></li>
+                    <li class="nav__item"><a href="experience.html" class="nav__link">Experience</a></li>
+                </ul>
+            </div>
+            <div class="content">
+                <div class="right">
+                    <p>Click To Play Music Khá Bảnh</p>
+                    <img src="images/play.png" id="icon">
+                </div>
+            </div>
+    
+            <audio id="mysong">
+                <source src="images/Walker.mp3" type="audio/mp3">
+            </audio>
+            <div class="nav__toggle" id="nav-toggle">
+                <i class='bx bx-menu'></i>
+            </div>
+        </nav>
+    </header>
+
+    <main class="l-main">
+        <!--===== HOME =====-->
+        <section class="hero" id="home">
+            <div class="home__data">
+                <h1 class="home__title">Hi,<br>I'm <span class="home__title-color">Văn Toàn</span><br><span class="text"></span></h1>
+
+                <!-- Download CV Button -->
+                <div class="home__cv">
+                    <a href="C:\Users\ADMIN\Desktop\Portfolio-master\assets\cv.pdf" class="button" download="Van_Teo_CV">Download CV <i class='bx bx-download'></i></a>
+                </div>
+            </div>
+            
+            <div class="home__social">
+                <a href="https://www.linkedin.com/in/to%C3%A0n-nguy%E1%BB%87n-4b2158299/" class="home__social-icon"><i class='bx bxl-linkedin'></i></a>
+                <a href="https://www.facebook.com/profile.php?id=100030192672209" class="home__social-icon"><i class='bx bxl-facebook'></i></a>
+                <a href="https://github.com/vantoannbc" class="home__social-icon"><i class='bx bxl-github'></i></a>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        var mysong = document.getElementById("mysong");
+        var icon = document.getElementById("icon");
+        
+        icon.onclick = function(){
+            if(mysong.paused){
+                mysong.play();
+                icon.src = "images/pause.png";
+            }else{
+                mysong.pause();
+                icon.src = "images/play.png";
+            }
+        }
+    </script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="script.js"></script>
+
+    <script>
+        var type = new Typed(".text", {
+            strings: ["Software Engineer", "Frontend Developer", "Web Designer"],
+            typeSpeed: 100,
+            backSpeed: 50,
+            backDelay: 1000,
+            startDelay: 500,
+            loop: true
+        });
+    </script>
+</body>
+</html>
